@@ -27,34 +27,25 @@
         </div>
       </div>
 
-      <nav class="primary-nav main-nav" aria-label="Primary">
-        <button class="home" aria-label="Home">⌂</button>
-        <a href="#" class="is-selected">MyHub</a>
-        <a href="#">Hospital Overview</a>
-        <a href="#">Delayed Discharge <span>⌄</span></a>
-        <a href="#">Bed &amp; Ward <span>⌄</span></a>
-        <a href="#">Scenario Mapping</a>
-        <a href="#">Patient Journey</a>
-        <a href="#">Connected Apps</a>
-      </nav>
-
-      <nav class="secondary-nav sub-nav" aria-label="Secondary">
-        <a href="#" class="is-selected">DD Hub</a>
-        <a href="#">Patient Management</a>
-        <a href="#">Census Management</a>
-        <a href="#">DDP Census</a>
+      <nav class="primary-nav main-nav" aria-label="Primary section anchors">
+        <a href="#overview" class="is-selected">Overview</a>
+        <a href="#tokens">Design Tokens</a>
+        <a href="#swatches">Colour Swatches</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#filters">Filter Examples</a>
+        <a href="#cards">Tile &amp; Cards</a>
       </nav>
     </header>
 
     <main class="main-content content">
-      <section class="hero">
+      <section class="hero" id="overview">
         <p class="eyebrow">Design Reference</p>
         <h2>QHPFH Design System</h2>
         <p>Design System source of truth for compact clinical dashboard patterns, visual tokens, and interaction standards aligned with the current preview direction.</p>
       </section>
 
       <section class="showcase-grid grid two">
-        <article class="panel card">
+        <article class="panel card" id="tokens">
           <header class="card-header">Design Tokens</header>
           <div class="card-body token-cards">
             <div class="token-card"><strong>Typography</strong><span>Noto Sans / Arial</span></div>
@@ -64,7 +55,7 @@
           </div>
         </article>
 
-        <article class="panel card">
+        <article class="panel card" id="swatches">
           <header class="card-header">Colour Swatches</header>
           <div class="card-body swatches">
             <div class="swatch"><i style="background:#005eb8"></i><span>Primary Blue</span></div>
@@ -74,7 +65,7 @@
           </div>
         </article>
 
-        <article class="panel card">
+        <article class="panel card" id="buttons">
           <header class="card-header">Buttons</header>
           <div class="card-body button-row">
             <button class="btn btn--primary">Primary action</button>
@@ -83,7 +74,7 @@
           </div>
         </article>
 
-        <article class="panel card">
+        <article class="panel card" id="filters">
           <header class="card-header">Filter Example</header>
           <div class="card-body filter-inline">
             <button class="filter-chip is-active">Medical</button>
@@ -92,7 +83,7 @@
           </div>
         </article>
 
-        <article class="panel panel--wide card">
+        <article class="panel panel--wide card" id="cards">
           <header class="card-header">Tile/Card Example</header>
           <div class="card-body tile-grid">
             <div class="tile"><h3>Delayed Discharge</h3><p>12 patients pending transition plan.</p></div>

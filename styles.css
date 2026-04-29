@@ -56,17 +56,15 @@ h1 { margin: 0; color: var(--title-navy); font-weight: 700; font-size: clamp(18p
 .btn--search { height: 22px; margin: 0; font-size: 10px; padding: 0 10px; }
 .theme-toggle { height: 24px; border: 1px solid var(--border); background: var(--panel); color: var(--blue); font: 600 11px var(--font-sans); padding: 0 10px; border-radius: 2px; cursor: pointer; }
 
-.primary-nav,.secondary-nav { display: flex; align-items: center; height: 30px; border-bottom: 1px solid var(--border); overflow-x: auto; }
-.primary-nav { background: var(--bg-menu); }
-.secondary-nav { background: var(--bg-submenu); padding-left: 210px; }
-.primary-nav a, .secondary-nav a, .home {
+.primary-nav { display: flex; align-items: center; height: 30px; border-bottom: 1px solid var(--border); overflow-x: auto; background: var(--bg-menu); }
+.primary-nav a {
   height: 100%; display: flex; align-items: center; padding: 0 10px; border-left: 1px solid var(--border);
   border-bottom: 3px solid transparent;
   text-decoration: none; color: var(--ink); background: transparent; white-space: nowrap; font-size: clamp(11px, 0.72vw, 14px);
 }
-.home { width: 35px; justify-content: center; padding: 0; color: var(--blue); font-size: 15px; border-right: 1px solid var(--border); }
-.primary-nav a:hover,.secondary-nav a:hover,.home:hover { background: var(--bg-active); color: var(--blue); }
-.primary-nav a.is-selected,.secondary-nav a.is-selected { background: var(--bg-active); color: var(--blue); border-bottom-color: var(--blue-strong); font-weight: 600; }
+.primary-nav a:last-child { border-right: 1px solid var(--border); }
+.primary-nav a:hover { background: var(--bg-active); color: var(--blue); }
+.primary-nav a.is-selected { background: var(--bg-active); color: var(--blue); border-bottom-color: var(--blue-strong); font-weight: 600; }
 
 .main-content { max-width: 1320px; margin: 0 auto; padding: 22px 28px 60px; }
 .hero {
@@ -104,9 +102,6 @@ h1 { margin: 0; color: var(--title-navy); font-weight: 700; font-size: clamp(18p
 .tile h3 { margin: 0 0 4px; font-size: 13px; color: var(--ink-strong); }
 .tile p { margin: 0; font-size: 12px; }
 
-@media (max-width: 1024px) {
-  .secondary-nav { padding-left: 20px; }
-}
 @media (max-width: 980px) {
   .showcase-grid, .tile-grid, .token-cards, .swatches { grid-template-columns: 1fr; }
   .masthead__inner { flex-wrap: wrap; height: auto; padding: 8px 12px; gap: 8px; }
