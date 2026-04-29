@@ -8,122 +8,100 @@
 </head>
 <body>
   <div class="page">
-    <header class="masthead">
-      <div class="masthead__inner">
+    <header class="masthead hub-header">
+      <div class="masthead__inner primary-header">
         <div class="brand">
-          <div class="qg-mark">Queensland<br>Government</div>
+          <div class="qg-lockup" aria-label="Queensland Government">
+            <span>Queensland</span>
+            <span>Government</span>
+          </div>
           <div class="brand-sep"></div>
           <h1>QH Patient Flow Hub</h1>
         </div>
         <div class="header-tools">
           <label class="search" aria-label="Search">
-            <input type="text" aria-label="Search input" />
+            <input type="text" aria-label="Search input" placeholder="Search" />
             <button class="btn btn--primary btn--search">Search</button>
           </label>
-          <button class="profile" id="toasterToggle" aria-expanded="false" aria-controls="toasterMenu">
-            <span class="avatar"></span>
-            <span>Dr Steven Strange</span>
-            <span class="chevron">⌄</span>
-          </button>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark mode</button>
         </div>
       </div>
+
+      <nav class="primary-nav main-nav" aria-label="Primary">
+        <button class="home" aria-label="Home">⌂</button>
+        <a href="#" class="is-selected">MyHub</a>
+        <a href="#">Hospital Overview</a>
+        <a href="#">Delayed Discharge <span>⌄</span></a>
+        <a href="#">Bed &amp; Ward <span>⌄</span></a>
+        <a href="#">Scenario Mapping</a>
+        <a href="#">Patient Journey</a>
+        <a href="#">Connected Apps</a>
+      </nav>
+
+      <nav class="secondary-nav sub-nav" aria-label="Secondary">
+        <a href="#" class="is-selected">DD Hub</a>
+        <a href="#">Patient Management</a>
+        <a href="#">Census Management</a>
+        <a href="#">DDP Census</a>
+      </nav>
     </header>
 
-    <nav class="primary-nav" aria-label="Primary">
-      <button class="home" aria-label="Home">⌂</button>
-      <a href="#" class="is-selected">MyHub</a>
-      <a href="#">Hospital Overview</a>
-      <a href="#">Delayed Discharge <span>⌄</span></a>
-      <a href="#">Bed &amp; Ward <span>⌄</span></a>
-      <a href="#">Scenario Mapping</a>
-      <a href="#">Patient Journey</a>
-      <a href="#">Connected Apps</a>
-    </nav>
-
-    <nav class="secondary-nav" aria-label="Secondary">
-      <a href="#" class="is-selected">DD Hub</a>
-      <a href="#">Patient Management</a>
-      <a href="#">Census Management</a>
-      <a href="#">DDP Census</a>
-    </nav>
-
-    <main class="main-content">
-      <section class="filter-bar" aria-label="Filters">
-        <label>HSS:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
-        <label>Facility:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
-        <label>Ward:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
+    <main class="main-content content">
+      <section class="hero">
+        <p class="eyebrow">Design Reference</p>
+        <h2>QHPFH Design System</h2>
+        <p>Design System source of truth for compact clinical dashboard patterns, visual tokens, and interaction standards aligned with the current preview direction.</p>
       </section>
 
-      <section class="showcase-grid">
-        <article class="panel">
-          <h2>Design Tokens</h2>
-          <div class="token-cards">
-            <div class="token-card"><strong>Typography</strong><span>Segoe UI / Arial</span></div>
+      <section class="showcase-grid grid two">
+        <article class="panel card">
+          <header class="card-header">Design Tokens</header>
+          <div class="card-body token-cards">
+            <div class="token-card"><strong>Typography</strong><span>Noto Sans / Arial</span></div>
             <div class="token-card"><strong>Spacing</strong><span>4 / 8 / 12 / 16 / 24</span></div>
-            <div class="token-card"><strong>Radius</strong><span>2px / 4px</span></div>
+            <div class="token-card"><strong>Radius</strong><span>2px / 4px / 6px</span></div>
             <div class="token-card"><strong>Elevation</strong><span>Low clinical contrast</span></div>
           </div>
         </article>
 
-        <article class="panel">
-          <h2>Colour Swatches</h2>
-          <div class="swatches">
-            <div class="swatch"><i style="background:#0072ce"></i><span>Primary Blue</span></div>
-            <div class="swatch"><i style="background:#0f1a3a"></i><span>Navy</span></div>
-            <div class="swatch"><i style="background:#f6f7f8"></i><span>Canvas</span></div>
-            <div class="swatch"><i style="background:#ffffff"></i><span>Panel</span></div>
+        <article class="panel card">
+          <header class="card-header">Colour Swatches</header>
+          <div class="card-body swatches">
+            <div class="swatch"><i style="background:#005eb8"></i><span>Primary Blue</span></div>
+            <div class="swatch"><i style="background:#000053"></i><span>Title Navy</span></div>
+            <div class="swatch"><i style="background:#f5f9fc"></i><span>App Canvas</span></div>
+            <div class="swatch"><i style="background:#ffffff"></i><span>Surface</span></div>
           </div>
         </article>
 
-        <article class="panel">
-          <h2>Buttons</h2>
-          <div class="button-row">
+        <article class="panel card">
+          <header class="card-header">Buttons</header>
+          <div class="card-body button-row">
             <button class="btn btn--primary">Primary action</button>
             <button class="btn btn--secondary">Secondary</button>
             <button class="btn btn--ghost">Ghost</button>
           </div>
         </article>
 
-        <article class="panel">
-          <h2>Filter Example</h2>
-          <div class="filter-inline">
+        <article class="panel card">
+          <header class="card-header">Filter Example</header>
+          <div class="card-body filter-inline">
             <button class="filter-chip is-active">Medical</button>
             <button class="filter-chip">Surgical</button>
             <button class="filter-chip">Critical Care</button>
           </div>
         </article>
 
-        <article class="panel panel--wide">
-          <h2>Tile/Card Example</h2>
-          <div class="tile-grid">
+        <article class="panel panel--wide card">
+          <header class="card-header">Tile/Card Example</header>
+          <div class="card-body tile-grid">
             <div class="tile"><h3>Delayed Discharge</h3><p>12 patients pending transition plan.</p></div>
             <div class="tile"><h3>Ward Capacity</h3><p>86% occupancy across monitored wards.</p></div>
             <div class="tile"><h3>Escalations</h3><p>2 active system alerts requiring review.</p></div>
           </div>
         </article>
-
-        <article class="panel panel--wide">
-          <h2>Slideout + Theme</h2>
-          <p class="panel-note">Use the profile menu in the header for a slideout example. Use theme controls to preview light and dark mode.</p>
-          <div class="button-row">
-            <button class="btn btn--secondary" id="lightModeBtn">Light mode</button>
-            <button class="btn btn--secondary" id="darkModeBtn">Dark mode</button>
-          </div>
-        </article>
       </section>
     </main>
-
-    <menu class="toaster" id="toasterMenu" hidden>
-      <button class="is-selected">On Call</button>
-      <button>Support</button>
-      <button>Notifications</button>
-    </menu>
   </div>
 
   <script src="script.js"></script>
