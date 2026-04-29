@@ -11,29 +11,23 @@
     <header class="masthead hub-header">
       <div class="masthead__inner primary-header">
         <div class="brand">
-          <div class="qg-lockup" aria-label="Queensland Government">
-            <span>Queensland</span>
-            <span>Government</span>
-          </div>
+          <div class="qg-lockup" aria-label="Queensland Government"><span>Queensland</span><span>Government</span></div>
           <div class="brand-sep"></div>
           <h1>QH Patient Flow Hub</h1>
         </div>
         <div class="header-tools">
-          <label class="search" aria-label="Search">
-            <input type="text" aria-label="Search input" placeholder="Search" />
-            <button class="btn btn--primary btn--search">Search</button>
-          </label>
+          <label class="search" aria-label="Search"><input type="text" aria-label="Search input" placeholder="Search" /><button class="btn btn--primary btn--search">Search</button></label>
           <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark mode</button>
         </div>
       </div>
 
       <nav class="primary-nav main-nav" aria-label="Primary section anchors">
         <a href="#overview" class="is-selected">Overview</a>
-        <a href="#tokens">Design Tokens</a>
-        <a href="#swatches">Colour Swatches</a>
+        <a href="#tokens">Tokens</a>
+        <a href="#swatches">Swatches</a>
         <a href="#buttons">Buttons</a>
-        <a href="#filters">Filter Examples</a>
-        <a href="#cards">Tile &amp; Cards</a>
+        <a href="#filters">Filters</a>
+        <a href="#cards">Cards</a>
       </nav>
     </header>
 
@@ -41,56 +35,46 @@
       <section class="hero" id="overview">
         <p class="eyebrow">Design Reference</p>
         <h2>QHPFH Design System</h2>
-        <p>Design System source of truth for compact clinical dashboard patterns, visual tokens, and interaction standards aligned with the current preview direction.</p>
+        <p>Source of Truth for compact clinical dashboard foundations, component behaviour, and light/dark visual tokens aligned to the original preview reference.</p>
       </section>
 
-      <section class="showcase-grid grid two">
-        <article class="panel card" id="tokens">
-          <header class="card-header">Design Tokens</header>
-          <div class="card-body token-cards">
-            <div class="token-card"><strong>Typography</strong><span>Noto Sans / Arial</span></div>
-            <div class="token-card"><strong>Spacing</strong><span>4 / 8 / 12 / 16 / 24</span></div>
-            <div class="token-card"><strong>Radius</strong><span>2px / 4px / 6px</span></div>
-            <div class="token-card"><strong>Elevation</strong><span>Low clinical contrast</span></div>
-          </div>
-        </article>
+      <section class="section" id="tokens">
+        <div class="section-header"><p class="section-badge">Foundations</p><h3>Design Tokens</h3><p class="desc">Core typography, spacing and radius values used across the QHPFH Design System.</p></div>
+        <div class="panel card"><div class="card-body token-cards">
+          <div class="token-card"><strong>Typography</strong><span>Noto Sans / Arial</span></div>
+          <div class="token-card"><strong>Spacing</strong><span>4 / 8 / 12 / 16 / 24</span></div>
+          <div class="token-card"><strong>Radius</strong><span>2px / 4px / 6px</span></div>
+          <div class="token-card"><strong>Border</strong><span>0.5px–1px subtle lines</span></div>
+        </div></div>
+      </section>
 
-        <article class="panel card" id="swatches">
-          <header class="card-header">Colour Swatches</header>
-          <div class="card-body swatches">
-            <div class="swatch"><i style="background:#005eb8"></i><span>Primary Blue</span></div>
-            <div class="swatch"><i style="background:#000053"></i><span>Title Navy</span></div>
-            <div class="swatch"><i style="background:#f5f9fc"></i><span>App Canvas</span></div>
-            <div class="swatch"><i style="background:#ffffff"></i><span>Surface</span></div>
-          </div>
-        </article>
+      <section class="section" id="swatches">
+        <div class="section-header"><p class="section-badge">Colour</p><h3>Swatches</h3><p class="desc">Primary and surface colours with compact, readable contrast.</p></div>
+        <div class="panel card"><div class="card-body swatches">
+          <div class="swatch"><i style="background:#005eb8"></i><span>Primary Blue</span></div>
+          <div class="swatch"><i style="background:#000053"></i><span>Title Navy</span></div>
+          <div class="swatch"><i style="background:#f5f9fc"></i><span>App Canvas</span></div>
+          <div class="swatch"><i style="background:#ffffff"></i><span>Surface</span></div>
+        </div></div>
+      </section>
 
-        <article class="panel card" id="buttons">
-          <header class="card-header">Buttons</header>
-          <div class="card-body button-row">
-            <button class="btn btn--primary">Primary action</button>
-            <button class="btn btn--secondary">Secondary</button>
-            <button class="btn btn--ghost">Ghost</button>
-          </div>
-        </article>
+      <section class="section" id="buttons">
+        <div class="section-header"><p class="section-badge">Actions</p><h3>Buttons</h3></div>
+        <div class="panel card"><div class="card-body button-row"><button class="btn btn--primary">Primary action</button><button class="btn btn--secondary">Secondary</button><button class="btn btn--ghost">Ghost</button></div></div>
+      </section>
 
-        <article class="panel card" id="filters">
-          <header class="card-header">Filter Example</header>
-          <div class="card-body filter-inline">
-            <button class="filter-chip is-active">Medical</button>
-            <button class="filter-chip">Surgical</button>
-            <button class="filter-chip">Critical Care</button>
-          </div>
-        </article>
+      <section class="section" id="filters">
+        <div class="section-header"><p class="section-badge">Components</p><h3>Filter Examples</h3><p class="desc">Filters remain component-level examples only.</p></div>
+        <div class="panel card"><div class="card-body filter-inline"><button class="filter-chip is-active">Medical</button><button class="filter-chip">Surgical</button><button class="filter-chip">Critical Care</button></div></div>
+      </section>
 
-        <article class="panel panel--wide card" id="cards">
-          <header class="card-header">Tile/Card Example</header>
-          <div class="card-body tile-grid">
-            <div class="tile"><h3>Delayed Discharge</h3><p>12 patients pending transition plan.</p></div>
-            <div class="tile"><h3>Ward Capacity</h3><p>86% occupancy across monitored wards.</p></div>
-            <div class="tile"><h3>Escalations</h3><p>2 active system alerts requiring review.</p></div>
-          </div>
-        </article>
+      <section class="section" id="cards">
+        <div class="section-header"><p class="section-badge">Layout</p><h3>Tile &amp; Card Examples</h3></div>
+        <div class="panel card"><div class="card-body tile-grid">
+          <div class="tile"><h4>Delayed Discharge</h4><p>12 patients pending transition plan.</p></div>
+          <div class="tile"><h4>Ward Capacity</h4><p>86% occupancy across monitored wards.</p></div>
+          <div class="tile"><h4>Escalations</h4><p>2 active system alerts requiring review.</p></div>
+        </div></div>
       </section>
     </main>
   </div>
