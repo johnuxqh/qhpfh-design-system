@@ -1,14 +1,43 @@
 const root = document.documentElement;
-const toggle = document.getElementById('themeToggle');
+const toasterToggle = document.getElementById('toasterToggle');
+const toasterMenu = document.getElementById('toasterMenu');
+
 const storedTheme = localStorage.getItem('qhpfh-theme');
 if (storedTheme) root.setAttribute('data-theme', storedTheme);
 
-toggle.addEventListener('click', () => {
-  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('qhpfh-theme', next);
+function closeToaster() {
+  toasterMenu.hidden = true;
+  toasterToggle.setAttribute('aria-expanded', 'false');
+}
+
+function openToaster() {
+  toasterMenu.hidden = false;
+  toasterToggle.setAttribute('aria-expanded', 'true');
+}
+
+toasterToggle.addEventListener('click', () => {
+  if (toasterMenu.hidden) openToaster();
+  else closeToaster();
 });
 
-const panel = document.getElementById('panel');
-document.getElementById('openPanel').addEventListener('click', () => panel.setAttribute('aria-hidden', 'false'));
-document.getElementById('closePanel').addEventListener('click', () => panel.setAttribute('aria-hidden', 'true'));
+document.addEventListener('click', (event) => {
+  if (!toasterMenu.contains(event.target) && !toasterToggle.contains(event.target)) {
+    closeToaster();
+  }
+});
+
+toasterMenu.querySelectorAll('button').forEach((button) => {
+  button.addEventListener('click', () => {
+    toasterMenu.querySelectorAll('button').forEach((b) => b.classList.remove('is-selected'));
+    button.classList.add('is-selected');
+  });
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'd') {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('qhpfh-theme', next);
+  }
+  if (event.key === 'Escape') closeToaster();
+});

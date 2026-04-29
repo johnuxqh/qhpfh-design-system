@@ -3,62 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queensland Patient Flow Hub — Design System Bible</title>
+  <title>QHPFH Design System</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar__inner shell">
-      <div>
-        <p class="eyebrow">Queensland Health</p>
-        <h1>Patient Flow Hub Design System</h1>
+  <div class="page">
+    <header class="masthead">
+      <div class="masthead__inner">
+        <div class="brand">
+          <div class="qg-mark">Queensland<br>Government</div>
+          <div class="brand-sep"></div>
+          <h1>QH Patient Flow Hub</h1>
+        </div>
+        <div class="header-tools">
+          <label class="search" aria-label="Search">
+            <input type="text" placeholder="" />
+            <button class="btn btn--primary btn--search">Search</button>
+          </label>
+          <button class="profile" id="toasterToggle" aria-expanded="false" aria-controls="toasterMenu">
+            <span class="avatar"></span>
+            <span>Dr Steven Strange</span>
+            <span class="chevron">⌄</span>
+          </button>
+        </div>
       </div>
-      <button id="themeToggle" class="btn btn--ghost" aria-label="Toggle light and dark mode">Toggle theme</button>
-    </div>
-  </header>
+    </header>
 
-  <div class="layout shell">
-    <aside class="sidenav" aria-label="Section navigation">
-      <nav>
-        <a href="#overview">1. Overview</a>
-        <a href="#principles">2. Design principles</a>
-        <a href="#tokens">3. Design tokens</a>
-        <a href="#colour">4. Colour system</a>
-        <a href="#typography">5. Typography</a>
-        <a href="#spacing">6. Spacing and layout</a>
-        <a href="#header-nav">7. Header and navigation</a>
-        <a href="#buttons">8. Buttons</a>
-        <a href="#cards">9. Cards and tiles</a>
-        <a href="#filters">10. Filters and dropdowns</a>
-        <a href="#slideout">11. Slideout panels</a>
-        <a href="#themes">12. Light and dark mode</a>
-        <a href="#accessibility">13. Accessibility guidance</a>
-        <a href="#usage">14. Component usage notes</a>
-        <a href="#changelog">15. Changelog / version notes</a>
-      </nav>
-    </aside>
+    <nav class="primary-nav" aria-label="Primary">
+      <button class="home">⌂</button>
+      <a href="#" class="is-selected">MyHub</a>
+      <a href="#">Hospital Overview</a>
+      <a href="#">Delayed Discharge <span>⌄</span></a>
+      <a href="#">Bed &amp; Ward <span>⌄</span></a>
+      <a href="#">Scenario Mapping</a>
+      <a href="#">Patient Journey</a>
+      <a href="#">Connected Apps</a>
+    </nav>
 
-    <main class="content">
-      <section id="overview"><h2>1. Overview</h2><p>This site is the first serious design system bible for the Queensland Patient Flow Hub (QPHFH). It sets a clinical, calm and practical baseline for future implementation work in the qhpf-prototype repository. All examples use placeholder content only and no patient data.</p></section>
-      <section id="principles"><h2>2. Design principles</h2><ul><li><strong>Clinical clarity:</strong> Make critical information instantly scannable.</li><li><strong>Operational speed:</strong> Reduce cognitive load for shift-based users.</li><li><strong>Consistency:</strong> Use repeatable patterns and tokens across pages.</li><li><strong>Accessibility first:</strong> Keyboard, contrast and readable structure are non-negotiable.</li></ul></section>
-      <section id="tokens"><h2>3. Design tokens</h2><div class="code">:root {
-  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
-  --radius-sm: 4px; --radius-md: 8px; --shadow-1: 0 1px 3px rgba(0,0,0,.12);
-  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
-}</div></section>
-      <section id="colour"><h2>4. Colour system</h2><div class="swatches"><div class="swatch" style="--sw:#005eb8"><span>Primary #005EB8</span></div><div class="swatch" style="--sw:#0f172a"><span>Text Strong #0F172A</span></div><div class="swatch" style="--sw:#e11d48"><span>Alert #E11D48</span></div><div class="swatch" style="--sw:#f8fafc"><span>Surface #F8FAFC</span></div></div></section>
-      <section id="typography"><h2>5. Typography</h2><p class="type-xl">Heading XL — Operational Dashboard</p><p class="type-lg">Heading LG — Ward Utilisation</p><p>Body text is 16px equivalent with generous line-height to support prolonged use on 1440px laptops and larger monitors up to 1980px.</p></section>
-      <section id="spacing"><h2>6. Spacing and layout</h2><p>The content shell uses a max-width of 1680px and comfortable gutters. Core cards and modules are built on an 8px spacing rhythm.</p><div class="card">Example module with spacing token use: padding var(--space-5), gap var(--space-3).</div></section>
-      <section id="header-nav"><h2>7. Header and navigation</h2><p>Use sticky top bar for context and a sticky section navigator for long-form documentation. Keep labels explicit and brief.</p></section>
-      <section id="buttons"><h2>8. Buttons</h2><div class="row"><button class="btn btn--primary">Primary action</button><button class="btn btn--secondary">Secondary</button><button class="btn btn--ghost">Ghost</button></div></section>
-      <section id="cards"><h2>9. Cards and tiles</h2><div class="grid-2"><article class="card"><h3>Capacity Tile</h3><p>Use for top-level metrics and status summaries.</p></article><article class="card"><h3>Operational Card</h3><p>Use for shift updates and queued actions.</p></article></div></section>
-      <section id="filters"><h2>10. Filters and dropdowns</h2><div class="row"><label>Hospital<select><option>All facilities</option><option>Metro North</option><option>Metro South</option></select></label><label>Status<select><option>All</option><option>Stable</option><option>At risk</option></select></label></div></section>
-      <section id="slideout"><h2>11. Slideout panels</h2><button id="openPanel" class="btn btn--secondary">Open sample slideout</button><aside id="panel" class="panel" aria-hidden="true"><div class="panel__head"><h3>Slideout example</h3><button id="closePanel" class="btn btn--ghost">Close</button></div><p>Use slideouts for supporting detail while preserving dashboard context.</p></aside></section>
-      <section id="themes"><h2>12. Light and dark mode</h2><p>Theme tokens are defined using CSS variables under <code>:root</code> and <code>[data-theme="dark"]</code>. Both modes prioritise contrast and reduced eye strain in long clinical sessions.</p></section>
-      <section id="accessibility"><h2>13. Accessibility guidance</h2><ul><li>Maintain colour contrast at WCAG AA minimum.</li><li>Ensure all interactive controls are keyboard reachable.</li><li>Use semantic HTML headings and landmarks.</li><li>Never encode status by colour alone.</li></ul></section>
-      <section id="usage"><h2>14. Component usage notes</h2><p>Buttons trigger actions; cards summarise; filters refine datasets; slideouts reveal secondary context. Prefer one primary action per region to reduce mistakes under time pressure.</p></section>
-      <section id="changelog"><h2>15. Changelog / version notes</h2><ul><li><strong>v0.1.0 — 2026-04-29:</strong> Initial static design system bible structure, tokens, theming and component examples.</li></ul></section>
+    <nav class="secondary-nav" aria-label="Secondary">
+      <a href="#" class="is-selected">DD Hub</a>
+      <a href="#">Patient Management</a>
+      <a href="#">Census Management</a>
+      <a href="#">DDP Census</a>
+    </nav>
+
+    <main class="main-content">
+      <div class="filter-bar" role="group" aria-label="Filters">
+        <label>HSS:
+          <button class="filter-dd">All <span>⌄</span></button>
+        </label>
+        <label>Facility:
+          <button class="filter-dd">All <span>⌄</span></button>
+        </label>
+        <label>Ward:
+          <button class="filter-dd">All <span>⌄</span></button>
+        </label>
+      </div>
+
+      <section class="button-row" aria-label="Buttons">
+        <button class="btn btn--primary">Primary action</button>
+        <button class="btn btn--secondary">Secondary</button>
+        <button class="btn btn--ghost">Ghost</button>
+      </section>
     </main>
+
+    <menu class="toaster" id="toasterMenu" hidden>
+      <button class="is-selected">On Call</button>
+      <button>Support</button>
+      <button>Notifications</button>
+    </menu>
   </div>
 
   <script src="script.js"></script>
