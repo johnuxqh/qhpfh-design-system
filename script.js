@@ -1,6 +1,8 @@
 const root = document.documentElement;
 const toasterToggle = document.getElementById('toasterToggle');
 const toasterMenu = document.getElementById('toasterMenu');
+const lightModeBtn = document.getElementById('lightModeBtn');
+const darkModeBtn = document.getElementById('darkModeBtn');
 
 const storedTheme = localStorage.getItem('qhpfh-theme');
 if (storedTheme) root.setAttribute('data-theme', storedTheme);
@@ -33,11 +35,18 @@ toasterMenu.querySelectorAll('button').forEach((button) => {
   });
 });
 
+function setTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  localStorage.setItem('qhpfh-theme', theme);
+}
+
+lightModeBtn.addEventListener('click', () => setTheme('light'));
+darkModeBtn.addEventListener('click', () => setTheme('dark'));
+
 window.addEventListener('keydown', (event) => {
   if (event.key === 'd') {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('qhpfh-theme', next);
+    setTheme(next);
   }
   if (event.key === 'Escape') closeToaster();
 });
