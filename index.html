@@ -8,124 +8,104 @@
 </head>
 <body>
   <div class="page">
-    <header class="masthead">
-      <div class="masthead__inner">
+    <header class="masthead hub-header">
+      <div class="masthead__inner primary-header">
         <div class="brand">
-          <div class="qg-mark">Queensland<br>Government</div>
-          <div class="brand-sep"></div>
-          <h1>QH Patient Flow Hub</h1>
+          <img class="brand-logo" src="assets/reference/header.png" alt="Queensland Government and QH Patient Flow Hub logo" />
         </div>
         <div class="header-tools">
-          <label class="search" aria-label="Search">
-            <input type="text" aria-label="Search input" />
-            <button class="btn btn--primary btn--search">Search</button>
-          </label>
-          <button class="profile" id="toasterToggle" aria-expanded="false" aria-controls="toasterMenu">
-            <span class="avatar"></span>
-            <span>Dr Steven Strange</span>
-            <span class="chevron">⌄</span>
-          </button>
+          <label class="search" aria-label="Search"><input type="text" aria-label="Search input" placeholder="Search" /><button class="btn btn--primary btn--search">Search</button></label>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">Dark mode</button>
         </div>
       </div>
+      <nav class="primary-nav" aria-label="Primary section anchors">
+        <a href="#principles" class="is-selected">Principles</a>
+        <a href="#colour">Colour</a>
+        <a href="#typography">Typography</a>
+        <a href="#components">Components</a>
+        <a href="#status">Clinical State</a>
+        <a href="#layouts">Layouts</a>
+      </nav>
     </header>
 
-    <nav class="primary-nav" aria-label="Primary">
-      <button class="home" aria-label="Home">⌂</button>
-      <a href="#" class="is-selected">MyHub</a>
-      <a href="#">Hospital Overview</a>
-      <a href="#">Delayed Discharge <span>⌄</span></a>
-      <a href="#">Bed &amp; Ward <span>⌄</span></a>
-      <a href="#">Scenario Mapping</a>
-      <a href="#">Patient Journey</a>
-      <a href="#">Connected Apps</a>
-    </nav>
-
-    <nav class="secondary-nav" aria-label="Secondary">
-      <a href="#" class="is-selected">DD Hub</a>
-      <a href="#">Patient Management</a>
-      <a href="#">Census Management</a>
-      <a href="#">DDP Census</a>
-    </nav>
-
     <main class="main-content">
-      <section class="filter-bar" aria-label="Filters">
-        <label>HSS:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
-        <label>Facility:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
-        <label>Ward:
-          <button class="filter-dd">All <span>⌄</span></button>
-        </label>
+      <section class="section" id="principles">
+        <p class="section-badge">01 · Foundation</p><h2>Design Principles</h2>
+        <p class="desc">Use a flat, compact, blue-led clinical style. White surfaces hold data. Blue communicates active state and structure. Status colours communicate operational meaning only.</p>
+        <div class="grid three cards-brief">
+          <article class="panel"><h3>Clinical calm</h3><p>Minimal decoration, restrained shadows and clear section rules. The interface should support scanning, not visual drama.</p></article>
+          <article class="panel"><h3>Navigation-first hierarchy</h3><p>Header and primary menu remain sticky so readers can scroll or anchor-jump through sections.</p></article>
+          <article class="panel"><h3>Token-led consistency</h3><p>Ignore small AI colour drift. Use this system for all generated views unless a new clinical state is explicitly required.</p></article>
+        </div>
+        <div class="logo-downloads panel">
+          <h3>Header logo assets</h3>
+          <p>Use these approved PNG lockups for light and dark contexts.</p>
+          <div class="logo-grid">
+            <figure class="logo-card"><img src="assets/reference/header.png" alt="Light logo lockup" /><figcaption>Light logo</figcaption><a class="btn btn--secondary" href="assets/reference/header.png" download="qhpfh-logo-light.png">Download PNG</a></figure>
+            <figure class="logo-card logo-card--dark"><img src="assets/reference/header.png" alt="Dark logo lockup" /><figcaption>Dark logo</figcaption><a class="btn btn--secondary" href="assets/reference/header.png" download="qhpfh-logo-dark.png">Download PNG</a></figure>
+          </div>
+        </div>
+
       </section>
 
-      <section class="showcase-grid">
-        <article class="panel">
-          <h2>Design Tokens</h2>
-          <div class="token-cards">
-            <div class="token-card"><strong>Typography</strong><span>Segoe UI / Arial</span></div>
-            <div class="token-card"><strong>Spacing</strong><span>4 / 8 / 12 / 16 / 24</span></div>
-            <div class="token-card"><strong>Radius</strong><span>2px / 4px</span></div>
-            <div class="token-card"><strong>Elevation</strong><span>Low clinical contrast</span></div>
-          </div>
-        </article>
+      <section class="section" id="colour">
+        <p class="section-badge">02 · Foundation</p><h2>Colour System</h2>
+        <p class="desc">Core palette confirmed from the light and dark Hub header/menu CSS and prototype screenshots.</p>
+        <h3 class="subhead">Primary light system</h3>
+        <div class="swatch-grid">
+          <article class="swatch-card"><i style="background:#005EB8"></i><strong>Primary Blue</strong><span>#005EB8</span></article>
+          <article class="swatch-card"><i style="background:#015EB8"></i><strong>Strong Blue</strong><span>#015EB8</span></article>
+          <article class="swatch-card"><i style="background:#307EDB"></i><strong>Action Blue</strong><span>#307EDB</span></article>
+          <article class="swatch-card"><i style="background:#F5F9FC"></i><strong>App Background</strong><span>#F5F9FC</span></article>
+          <article class="swatch-card"><i style="background:#F9F8F9"></i><strong>Menu Surface</strong><span>#F9F8F9</span></article>
+          <article class="swatch-card"><i style="background:#EDF6FF"></i><strong>Active Shell</strong><span>#EDF6FF</span></article>
+          <article class="swatch-card"><i style="background:#353535"></i><strong>Primary Text</strong><span>#353535</span></article>
+          <article class="swatch-card"><i style="background:#DADADA"></i><strong>Default Border</strong><span>#DADADA</span></article>
+        </div>
+      </section>
 
-        <article class="panel">
-          <h2>Colour Swatches</h2>
-          <div class="swatches">
-            <div class="swatch"><i style="background:#0072ce"></i><span>Primary Blue</span></div>
-            <div class="swatch"><i style="background:#0f1a3a"></i><span>Navy</span></div>
-            <div class="swatch"><i style="background:#f6f7f8"></i><span>Canvas</span></div>
-            <div class="swatch"><i style="background:#ffffff"></i><span>Panel</span></div>
-          </div>
-        </article>
+      <section class="section" id="typography">
+        <p class="section-badge">03 · Foundation</p><h2>Typography</h2>
+        <p class="desc">Use Noto Sans throughout. Do not use Public Sans in this prototype.</p>
+        <table><thead><tr><th>Use</th><th>Size / Weight</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Site title</td><td>20px / 700</td><td>QH Patient Flow Hub title in primary header</td></tr>
+            <tr><td>Menu text</td><td>11px / 400</td><td>Primary menu base</td></tr>
+            <tr><td>Selected menu text</td><td>11px / 600</td><td>Active tabs and selected states</td></tr>
+            <tr><td>Header search button</td><td>10px / 400</td><td>Matches compact QH header export</td></tr>
+            <tr><td>Table headers</td><td>10–11px / 700</td><td>Blue uppercase header labels</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-        <article class="panel">
-          <h2>Buttons</h2>
-          <div class="button-row">
-            <button class="btn btn--primary">Primary action</button>
-            <button class="btn btn--secondary">Secondary</button>
-            <button class="btn btn--ghost">Ghost</button>
-          </div>
-        </article>
+      <section class="section" id="components">
+        <p class="section-badge">05 · Components</p><h2>Component System</h2>
+        <p class="desc">Buttons and filters inherit the compact Hub UI: 24–30px controls, soft 2–4px radius, fine borders and blue active states.</p>
+        <div class="panel"><h3>Filters</h3><div class="filter-inline"><button class="filter-chip is-active">HSS: All</button><button class="filter-chip">Facility: All</button><button class="filter-chip">Ward: All</button></div></div>
+        <div class="panel"><h3>Buttons and Controls</h3><div class="button-row"><button class="btn btn--secondary">List</button><button class="btn btn--secondary">Grid</button><button class="btn btn--primary">Update Capacity</button><button class="btn btn--ghost">View Detail →</button></div></div>
+      </section>
 
-        <article class="panel">
-          <h2>Filter Example</h2>
-          <div class="filter-inline">
-            <button class="filter-chip is-active">Medical</button>
-            <button class="filter-chip">Surgical</button>
-            <button class="filter-chip">Critical Care</button>
-          </div>
-        </article>
+      <section class="section" id="status">
+        <p class="section-badge">06 · Clinical State</p><h2>Status Colours and Edge Cases</h2>
+        <div class="status-grid">
+          <article class="swatch-card"><i style="background:#009B68"></i><strong>Stable</strong><span>#009B68</span></article>
+          <article class="swatch-card"><i style="background:#1E7E34"></i><strong>Stable Dark</strong><span>#1E7E34</span></article>
+          <article class="swatch-card"><i style="background:#E67800"></i><strong>High Pressure</strong><span>#E67800</span></article>
+          <article class="swatch-card"><i style="background:#EE734B"></i><strong>High Alt</strong><span>#EE734B</span></article>
+          <article class="swatch-card"><i style="background:#BF0202"></i><strong>Critical</strong><span>#BF0202</span></article>
+          <article class="swatch-card"><i style="background:#E22339"></i><strong>Alert Red</strong><span>#E22339</span></article>
+        </div>
+      </section>
 
-        <article class="panel panel--wide">
-          <h2>Tile/Card Example</h2>
-          <div class="tile-grid">
-            <div class="tile"><h3>Delayed Discharge</h3><p>12 patients pending transition plan.</p></div>
-            <div class="tile"><h3>Ward Capacity</h3><p>86% occupancy across monitored wards.</p></div>
-            <div class="tile"><h3>Escalations</h3><p>2 active system alerts requiring review.</p></div>
-          </div>
-        </article>
-
-        <article class="panel panel--wide">
-          <h2>Slideout + Theme</h2>
-          <p class="panel-note">Use the profile menu in the header for a slideout example. Use theme controls to preview light and dark mode.</p>
-          <div class="button-row">
-            <button class="btn btn--secondary" id="lightModeBtn">Light mode</button>
-            <button class="btn btn--secondary" id="darkModeBtn">Dark mode</button>
-          </div>
-        </article>
+      <section class="section" id="layouts">
+        <p class="section-badge">07 · Universal</p><h2>Universal List and Grid Layouts</h2>
+        <div class="grid two">
+          <article class="panel"><h3>Grid / card view pattern</h3><p>Card tiles preserve the same status colours used in table mode.</p></article>
+          <article class="panel"><h3>List / table pattern</h3><table><thead><tr><th>Ward / Unit</th><th>Hospital</th><th>Capacity</th><th>Occupancy</th><th>Status</th></tr></thead><tbody><tr><td>PICU</td><td>Rockhampton</td><td>30</td><td>127%</td><td>Critical</td></tr><tr><td>General Medicine</td><td>QEII</td><td>28</td><td>89%</td><td>High Pressure</td></tr></tbody></table></article>
+        </div>
       </section>
     </main>
-
-    <menu class="toaster" id="toasterMenu" hidden>
-      <button class="is-selected">On Call</button>
-      <button>Support</button>
-      <button>Notifications</button>
-    </menu>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
